@@ -5,7 +5,7 @@ from pathlib import Path
 from os import listdir
 from os.path import isfile, join
 from utils import get_file_extension
-from file_extensions import getExtensionCategory
+from file_extensions_handler import getExtensionCategory
 
 def organise(filelist, directory):
     # moves files in folders accordind to their extentions
@@ -15,7 +15,7 @@ def organise(filelist, directory):
         if file_category != None:
             loc += file_category
         else:
-            loc += "Misc" # not in the file formats
+            loc += "Unknown Extensions" # not in the file formats
         Path(loc).mkdir(exist_ok=True)
         shutil.move(my_file, loc)
         print(f"moved {my_file} to {loc}")
