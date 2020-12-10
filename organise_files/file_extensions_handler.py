@@ -1,8 +1,8 @@
 import pickle
 import os
-from utils import load_pickle
-from file_formats_scrapper import load_common_extensions, load_extension_data
-from constants import EXTENSIONS_PICKLE_FILE_NAME
+from organise_files.utils import load_pickle
+from organise_files.file_formats_scrapper import load_common_extensions, load_extension_data
+from organise_files.constants import EXTENSIONS_PICKLE_FILE_NAME
 
 extensions = {}
 

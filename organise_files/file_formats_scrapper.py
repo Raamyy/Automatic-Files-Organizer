@@ -2,8 +2,8 @@ import requests
 import os
 import pickle
 from bs4 import BeautifulSoup
-from constants import EXTENSIONS_PICKLE_FILE_NAME
-from utils import save_pickle, load_pickle
+from organise_files.constants import EXTENSIONS_PICKLE_FILE_NAME
+from organise_files.utils import save_pickle, load_pickle
 
 # Used to initilally load the common extensions from file info.
 # It contains many (but not all) extensions
