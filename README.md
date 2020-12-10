@@ -7,11 +7,11 @@ The idea was orignally [Rohasen](https://github.com/Roshaen) at [Awesome-Automat
 ### PIP
 You can run this script using pip:
 ```console
-pip install organise-files
+$ pip install organise-files
 ```
 and then through the command line you can execute:
 ```console
-organise-files path/to/directory
+$ organise-files path/to/directory
 ```
 ### Run Locally
 1. Clone this repository.
