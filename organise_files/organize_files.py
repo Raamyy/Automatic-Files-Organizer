@@ -19,9 +19,13 @@ def organise(filelist, directory):
         Path(loc).mkdir(exist_ok=True)
         shutil.move(my_file, loc)
         print(f"moved {my_file} to {loc}")
-        
+
+def organise_directory(directory):
+    files = [join(directory, f) for f in listdir(directory) if isfile(join(directory, f))]
+    organise(files, directory)
+    print(f"Organised {len(files)} files into their directories")
             
-if __name__=='__main__':
+def main():
     directory_tobe_cleaned = ""
     if len(sys.argv) < 2:
         print(f"""Please enter a directory to clean. 
@@ -29,7 +33,7 @@ if __name__=='__main__':
         exit()
     else:
         directory_tobe_cleaned = sys.argv[1]
-    files = [join(directory_tobe_cleaned, f) for f in listdir(directory_tobe_cleaned) if isfile(join(directory_tobe_cleaned, f))]
-    organise(files, directory_tobe_cleaned)
+    organise_directory(directory_tobe_cleaned)
     print("Done!")
-    print(f"Organised {len(files)} files into their directories")
+
+main()
